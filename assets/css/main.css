@@ -1223,9 +1223,8 @@ section,
   }
 }
 
-.about .image-wrapper img {
-  border-radius: 8px;
-  box-shadow: 0 20px 60px color-mix(in srgb, var(--default-color), transparent 85%);
+.image-wrapper img.img-fluid {
+  margin-top: -200px;
 }
 
 .about .image-wrapper .floating-element {
@@ -3878,9 +3877,7 @@ section,
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
-}
+
 
 /*--------------------------------------------------------------
 # Portfolio Details Section
