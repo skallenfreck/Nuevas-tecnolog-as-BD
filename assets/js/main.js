@@ -218,3 +218,58 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+// Funciones específicas para la tarjeta de Valentina
+function animateValentinaCounter() {
+  const counter = document.querySelector('.valentina-stat-number[data-count]');
+  if (!counter) return;
+  
+  const target = parseInt(counter.getAttribute('data-count'));
+  const duration = 2000;
+  const step = target / (duration / 16);
+  let current = 0;
+
+  const timer = setInterval(() => {
+    current += step;
+    if (current >= target) {
+      counter.textContent = target;
+      clearInterval(timer);
+    } else {
+      counter.textContent = Math.floor(current);
+    }
+  }, 16);
+}
+
+function addValentinaHoverEffect() {
+  const valentinaCard = document.querySelector('.valentina-card');
+  if (!valentinaCard) return;
+  
+  valentinaCard.addEventListener('mouseenter', function() {
+    this.style.transform = 'translateY(-15px) scale(1.02)';
+  });
+  
+  valentinaCard.addEventListener('mouseleave', function() {
+    this.style.transform = 'translateY(0) scale(1)';
+  });
+}
+
+function initValentinaFeatures() {
+  // Observador para animar contador cuando sea visible
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateValentinaCounter();
+        observer.disconnect();
+      }
+    });
+  }, { threshold: 0.7 });
+
+  const valentinaCard = document.querySelector('.valentina-card');
+  if (valentinaCard) {
+    observer.observe(valentinaCard);
+    addValentinaHoverEffect();
+  }
+}
+
+// Inicializar funciones de Valentina cuando se carga la página
+window.addEventListener('load', initValentinaFeatures);
