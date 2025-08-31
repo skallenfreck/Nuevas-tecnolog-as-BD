@@ -1924,9 +1924,10 @@ section,
     font-size: 1.1rem;
   }
 }
-/*--------------------------------------------------------------
-# Mejoras específicas para la tarjeta de Valentina López
---------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------
+# Aportes individuales al desarrollo del sitio web en cuanto al CSS hecho por Valentina López
+Tarjeta individual del proceso de búsqueda en bases de datos
+--------------------------------------------------------------------------------------------*/
 .valentina-card {
   position: relative;
   overflow: hidden;
@@ -1941,19 +1942,6 @@ section,
   height: 4px;
   background: linear-gradient(90deg, #667eea, #764ba2);
   border-radius: 16px 16px 0 0;
-}
-
-.valentina-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  color: white;
-  padding: 8px 16px;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
 }
 
 .valentina-stats {
@@ -2016,22 +2004,6 @@ section,
   }
 }
 
-.valentina-name-corner {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background: rgba(102, 126, 234, 0.1);
-  color: #667eea;
-  padding: 6px 12px;
-  border-radius: 15px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  backdrop-filter: blur(10px);
-}
-
 .valentina-subtitle {
   color: #667eea;
   font-size: 15px;
@@ -2041,22 +2013,11 @@ section,
   align-items: center;
   gap: 8px;
 }
+/*-------------------------------------------------------------------------------------------
+# Aportes individuales al desarrollo del sitio web en cuanto al CSS hecho por Valentina López
+Tarjeta individual del proceso de búsqueda en bases de datos
+--------------------------------------------------------------------------------------------*/
 
-.valentina-floating-tag {
-  position: absolute;
-  right: 20px;
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  color: white;
-  padding: 8px 16px;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  z-index: 10;
-}
 
 /*--------------------------------------------------------------
 # Call To Action Section
