@@ -1742,6 +1742,7 @@ section,
   }
 }
 
+
 /*--------------------------------------------------------------
 # Features Cards Section
 --------------------------------------------------------------*/
@@ -1972,7 +1973,7 @@ Tarjeta individual del proceso de búsqueda en bases de datos
 }
 
 .valentina-query {
-  background: linear-gradient(135deg, #2c3e50, #3498db);
+  background: linear-gradient(135deg, #2c3e50, #667eea);
   color: white;
   padding: 15px;
   border-radius: 10px;
@@ -1981,6 +1982,7 @@ Tarjeta individual del proceso de búsqueda en bases de datos
   margin: 15px 0;
   position: relative;
   overflow: hidden;
+
 }
 
 .valentina-query::before {
