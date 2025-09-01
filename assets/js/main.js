@@ -224,37 +224,15 @@
  */
 
 document.addEventListener("DOMContentLoaded", () => {
-  const btn = document.getElementById("toggleBtn");
-  const text = document.getElementById("searchText");
-
-  // Aplicamos la clase fade-slide inicial
-  text.classList.add("fade-slide");
+  const btn = document.querySelector(".ver-mas");
+  const extra = document.querySelector(".extra-info");
 
   btn.addEventListener("click", () => {
-    text.classList.toggle("show");
-    btn.textContent = text.classList.contains("show")
+    extra.classList.toggle("show");
+    btn.textContent = extra.classList.contains("show")
       ? "Ver menos"
       : "Ver más";
   });
 });
 
-document.querySelector(".ver-mas").addEventListener("click", function () {
-  const extra = document.querySelector(".extra-info");
-  extra.style.display = (extra.style.display === "none") ? "block" : "none";
-  this.innerText = (this.innerText === "Ver más") ? "Ver menos" : "Ver más";
-});
 
-document.addEventListener("DOMContentLoaded", function () {
-  const btn = document.querySelector(".ver-mas");
-  const text = document.getElementById("searchText");
-
-  btn.addEventListener("click", function () {
-    if (text.style.display === "none" || text.style.display === "") {
-      text.style.display = "block";
-      btn.textContent = "Ver menos";
-    } else {
-      text.style.display = "none";
-      btn.textContent = "Ver más";
-    }
-  });
-});
