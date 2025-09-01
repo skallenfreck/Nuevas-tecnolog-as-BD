@@ -6,7 +6,7 @@
 * License: https://bootstrapmade.com/license/
 */
 
-(function() {
+(function () {
   "use strict";
 
   /**
@@ -52,7 +52,7 @@
    * Toggle mobile nav dropdowns
    */
   document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
-    navmenu.addEventListener('click', function(e) {
+    navmenu.addEventListener('click', function (e) {
       e.preventDefault();
       this.parentNode.classList.toggle('active');
       this.parentNode.nextElementSibling.classList.toggle('dropdown-active');
@@ -113,7 +113,7 @@
    * Init swiper sliders
    */
   function initSwiper() {
-    document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
+    document.querySelectorAll(".init-swiper").forEach(function (swiperElement) {
       let config = JSON.parse(
         swiperElement.querySelector(".swiper-config").innerHTML.trim()
       );
@@ -147,13 +147,13 @@
   /**
    * Init isotope layout and filters
    */
-  document.querySelectorAll('.isotope-layout').forEach(function(isotopeItem) {
+  document.querySelectorAll('.isotope-layout').forEach(function (isotopeItem) {
     let layout = isotopeItem.getAttribute('data-layout') ?? 'masonry';
     let filter = isotopeItem.getAttribute('data-default-filter') ?? '*';
     let sort = isotopeItem.getAttribute('data-sort') ?? 'original-order';
 
     let initIsotope;
-    imagesLoaded(isotopeItem.querySelector('.isotope-container'), function() {
+    imagesLoaded(isotopeItem.querySelector('.isotope-container'), function () {
       initIsotope = new Isotope(isotopeItem.querySelector('.isotope-container'), {
         itemSelector: '.isotope-item',
         layoutMode: layout,
@@ -162,8 +162,8 @@
       });
     });
 
-    isotopeItem.querySelectorAll('.isotope-filters li').forEach(function(filters) {
-      filters.addEventListener('click', function() {
+    isotopeItem.querySelectorAll('.isotope-filters li').forEach(function (filters) {
+      filters.addEventListener('click', function () {
         isotopeItem.querySelector('.isotope-filters .filter-active').classList.remove('filter-active');
         this.classList.add('filter-active');
         initIsotope.arrange({
@@ -180,7 +180,7 @@
   /**
    * Correct scrolling position upon page load for URLs containing hash links.
    */
-  window.addEventListener('load', function(e) {
+  window.addEventListener('load', function (e) {
     if (window.location.hash) {
       if (document.querySelector(window.location.hash)) {
         setTimeout(() => {
@@ -218,3 +218,43 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+/**
+ * JS -Camilo
+ */
+
+document.addEventListener("DOMContentLoaded", () => {
+  const btn = document.getElementById("toggleBtn");
+  const text = document.getElementById("searchText");
+
+  // Aplicamos la clase fade-slide inicial
+  text.classList.add("fade-slide");
+
+  btn.addEventListener("click", () => {
+    text.classList.toggle("show");
+    btn.textContent = text.classList.contains("show")
+      ? "Ver menos"
+      : "Ver más";
+  });
+});
+
+document.querySelector(".ver-mas").addEventListener("click", function () {
+  const extra = document.querySelector(".extra-info");
+  extra.style.display = (extra.style.display === "none") ? "block" : "none";
+  this.innerText = (this.innerText === "Ver más") ? "Ver menos" : "Ver más";
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const btn = document.querySelector(".ver-mas");
+  const text = document.getElementById("searchText");
+
+  btn.addEventListener("click", function () {
+    if (text.style.display === "none" || text.style.display === "") {
+      text.style.display = "block";
+      btn.textContent = "Ver menos";
+    } else {
+      text.style.display = "none";
+      btn.textContent = "Ver más";
+    }
+  });
+});
