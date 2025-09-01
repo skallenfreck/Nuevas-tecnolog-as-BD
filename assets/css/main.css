@@ -1785,6 +1785,31 @@ section,
   max-height: 500px; /* ajusta según tu contenido */
 }
 
+/* Acordeón suave */
+.extra-info {
+  display: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
+}
+.extra-info.show-extra {
+  display: block;
+  max-height: 500px; /* suficiente para su texto */
+  opacity: 1;
+}
+
+/* Badges interactivos */
+.camilo-badge {
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+.camilo-badge.active-badge {
+  background: #ce480a;
+  color: #fff;
+}
+
+
 /* Estilos para palabras clave - Camilo*/
 .primeraPalabra {
   background-color: #3f3f3f;

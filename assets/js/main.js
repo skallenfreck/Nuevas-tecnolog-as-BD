@@ -223,16 +223,55 @@
  * JS -Camilo
  */
 
+
+
+// Botón "Ver más / Ver menos"
 document.addEventListener("DOMContentLoaded", () => {
   const btn = document.querySelector(".ver-mas");
   const extra = document.querySelector(".extra-info");
 
-  btn.addEventListener("click", () => {
-    extra.classList.toggle("show");
-    btn.textContent = extra.classList.contains("show")
-      ? "Ver menos"
-      : "Ver más";
-  });
+  if (btn && extra) {
+    btn.addEventListener("click", () => {
+      extra.classList.toggle("show-extra");
+      btn.textContent = extra.classList.contains("show-extra")
+        ? "Ver menos"
+        : "Ver más";
+    });
+  }
 });
 
+// Hover dinámico en la tarjeta de Camilo
+const camiloCard = document.querySelector(".camilo-card");
+if (camiloCard) {
+  camiloCard.addEventListener("mouseenter", () => {
+    camiloCard.style.transform = "scale(1.05)";
+    camiloCard.style.boxShadow = "0 8px 20px rgba(0,0,0,0.2)";
+    camiloCard.style.transition = "all 0.3s ease";
+  });
 
+  camiloCard.addEventListener("mouseleave", () => {
+    camiloCard.style.transform = "scale(1)";
+    camiloCard.style.boxShadow = "none";
+  });
+}
+
+// Parallax en imagen de la tarjeta
+const cardImage = document.querySelector(".camilo-card img");
+if (cardImage) {
+  camiloCard.addEventListener("mousemove", (e) => {
+    const rect = camiloCard.getBoundingClientRect();
+    const x = (e.clientX - rect.left) / rect.width - 0.5;
+    const y = (e.clientY - rect.top) / rect.height - 0.5;
+
+    cardImage.style.transform = `translate(${x * 10}px, ${y * 10}px) scale(1.05)`;
+    cardImage.style.transition = "transform 0.1s ease";
+  });
+
+  camiloCard.addEventListener("mouseleave", () => {
+    cardImage.style.transform = "translate(0, 0) scale(1)";
+  });
+}
+
+/*--------------------------------------------------------------------------------*/
+/*  CAMILO PRIETO - FIN
+/*--------------------------------------------------------------------------------*/
