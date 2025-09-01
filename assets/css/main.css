@@ -1235,6 +1235,7 @@ section,
   }
 }
 
+/* Regla de estilo - Camilo */
 .image-wrapper img.img-fluid {
   margin-top: -200px;
 }
@@ -1742,24 +1743,18 @@ section,
   }
 }
 
-/* Estilos para palabras clave*/
+/* Estilos para palabras clave - Camilo*/
 .primeraPalabra {
   background-color: #3f3f3f;
-  /* púrpura */
   color: #fff;
 }
 
 .segundaPalabra {
   background-color: #c85716;
-  /* naranja */
   color: #ffffff;
 }
 
-.badge-vulnerability {
-  background-color: #228B22;
-  /* verde bosque */
-  color: #fff;
-}
+
 
 /*--------------------------------------------------------------
 # Features Cards Section
