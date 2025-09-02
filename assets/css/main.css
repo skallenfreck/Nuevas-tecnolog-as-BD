@@ -12,29 +12,41 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Lato",  sans-serif;
-  --nav-font: "Montserrat",  sans-serif;
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Lato", sans-serif;
+  --nav-font: "Montserrat", sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #1a1715; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #110a06; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #c85716; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+:root {
+  --background-color: #ffffff;
+  /* Background color for the entire website, including individual sections */
+  --default-color: #1a1715;
+  /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #110a06;
+  /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #c85716;
+  /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #ffffff;
+  /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #ffffff;
+  /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: rgba(255, 255, 255, 0.8);  /* The default color of the main navmenu links */
-  --nav-hover-color: #c85716; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #1a1715; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #c85716; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-color: rgba(255, 255, 255, 0.8);
+  /* The default color of the main navmenu links */
+  --nav-hover-color: #c85716;
+  /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: #ffffff;
+  /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #ffffff;
+  /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: #1a1715;
+  /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #c85716;
+  /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -1911,6 +1923,107 @@ section,
   .features-cards .testimonial-content p {
     font-size: 1.1rem;
   }
+}
+
+/*--------------------------------------------------------------
+# Features Section Alexander
+--------------------------------------------------------------*/
+/* Estilo para el contenedor de los artículos */
+.alex-tab-content {
+  background-color: #f8f8f8;
+  padding: 30px;
+}
+
+/* Estilo para las secciones de los artículos */
+.alex-article-pane {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+/* Estilo para los títulos de los artículos */
+.alex-article-header {
+  font-size: 24px;
+  font-weight: bolder;
+  color: #333;
+  margin-bottom: 15px; /* Espacio debajo del título */
+  line-height: 1.5; /* Altura de línea para mayor legibilidad */
+  border-left: 4px solid var(--accent-color); /* Borde izquierdo por defecto */
+  padding-left: 20px; /* Espacio entre el borde y el texto */
+  transition: all 0.3s ease-in-out; /* Transición suave */
+}
+
+/* Efecto al pasar el mouse sobre el título del artículo (el borde se borra) */
+.alex-article-header:hover {
+  color: var(--accent-color); /* El color de texto cambia al pasar el mouse */
+  border-left: 4px solid transparent; /* El borde izquierdo desaparece */
+  background-color: #fff; /* Fondo blanco */
+  transform: translateX(5px); /* Desplazamiento suave hacia la derecha */
+}
+
+/* Contenedor para el fondo gris que envuelve los h3 y p */
+.alex-content-panel {
+  background-color: #f8f8f8;  /* Fondo gris */
+  padding: 20px;  /* Espaciado alrededor del contenido */
+  margin-bottom: 20px;  /* Espacio entre paneles */
+  border-radius: 10px;  /* Bordes redondeados */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);  /* Sombra suave */
+}
+
+/* Contenedor para los elementos h3 y p que deben estar alineados */
+.inline-container {
+  display: flex;  /* Flexbox para alinear h3, p y a en la misma línea */
+  align-items: baseline;  /* Alinea la base de los elementos para que estén alineados al principio */
+  margin-bottom: 10px;  /* Espacio entre los contenedores */
+}
+
+/* Estilo para los títulos h3 dentro del panel */
+.alex-subtitleh3 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  margin-right: 10px; /* Espacio entre el h3 y el p */
+  /* Sin display inline aquí, ya que el contenedor lo maneja */
+}
+
+/* Estilo para los textos dentro del p */
+.alex-article-text {
+  font-size: 12px;
+  line-height: 1.5; /* Asegura que el alineado sea consistente con los h3 */
+  color: #555;
+  margin: 0; /* Eliminar el margen para que el p se alinee correctamente */
+}
+
+/* Estilo para los enlaces <a> */
+.alex-link {
+  font-size: 6px;
+  color: var(--accent-color);  /* Usar el color de acento */
+  text-decoration: none;  /* Eliminar subrayado por defecto */
+  line-height: 1.5;  /* Alineado con el h3 */
+}
+
+/* Estilo para los enlaces al pasar el mouse (hover) */
+.alex-link:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+
+/* Estilo para las imágenes de los artículos */
+.alex-article-image {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* Estilo para el pie de página de los artículos */
+.alex-article-footer {
+  font-size: 14px;
+  color: #888;
+  text-align: right;
+  margin-top: 20px;
 }
 
 /*--------------------------------------------------------------
