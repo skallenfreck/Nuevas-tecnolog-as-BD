@@ -255,10 +255,25 @@ function changeBackgroundToWhite() {
   });
 }
 
-  // Función para contar los clics en la sección de Alexander
-  let clickCount = 0;
-  function countClicks() {
-    clickCount++;
-    document.getElementById("click-counter").innerHTML = "Número de clics: " + clickCount;
+// Función para contar los clics en cada artículo por separado
+let clickCount1 = 0;  // Contador para el artículo 1
+let clickCount2 = 0;  // Contador para el artículo 2
+let clickCount3 = 0;  // Contador para el artículo 3
+
+// Función para contar los clics por artículo
+function countClicks(article) {
+  if (article === 1) {
+    clickCount1++;  // Incrementa el contador para el artículo 1
+    document.getElementById("click-counter-1").innerHTML = "Artículo 1 - Número de clics: " + clickCount1;
+  } else if (article === 2) {
+    clickCount2++;  // Incrementa el contador para el artículo 2
+    document.getElementById("click-counter-2").innerHTML = "Artículo 2 - Número de clics: " + clickCount2;
+  } else if (article === 3) {
+    clickCount3++;  // Incrementa el contador para el artículo 3
+    document.getElementById("click-counter-3").innerHTML = "Artículo 3 - Número de clics: " + clickCount3;
   }
+}
+
+
+
 

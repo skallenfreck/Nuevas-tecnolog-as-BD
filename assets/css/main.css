@@ -2049,6 +2049,9 @@ section,
   cursor: pointer;  /* Cambia el cursor a mano al pasar el ratón */
   transition: all 0.3s ease;  /* Transición suave para los efectos */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Sombra suave */
+  width: auto;  /* Permite que el botón tenga un tamaño dinámico basado en el contenido */
+  min-width: 200px;  /* Asegura que los botones tengan un tamaño mínimo */
+  text-align: center;  /* Centra el texto dentro del botón */
 }
 
 /* Efecto de hover en los botones */
@@ -2071,6 +2074,35 @@ section,
   cursor: not-allowed;  /* Cambia el cursor para mostrar que no se puede hacer clic */
   box-shadow: none;  /* Sin sombra */
 }
+
+/* Estilo para los contenedores de clics (los contadores) */
+.alex-click-counter {
+  background-color: var(--accent-color);  /* Color de fondo */
+  color: #fff;  /* Texto blanco */
+  font-size: 16px;  /* Tamaño de la fuente */
+  padding: 12px 24px;  /* Relleno (espaciado dentro del contenedor) */
+  border: none;  /* Sin borde */
+  border-radius: 25px;  /* Bordes redondeados */
+  text-align: center;  /* Alinea el texto al centro */
+  margin-top: 20px;  /* Espacio superior entre los contadores */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Sombra suave */
+  transition: all 0.3s ease;  /* Transición suave para los efectos */
+  width: auto;  /* Permite que el contador tenga un tamaño dinámico basado en el contenido */
+  min-width: 200px;  /* Asegura que los contadores tengan un tamaño mínimo */
+}
+
+/* Efecto de hover en los contenedores de clics */
+.alex-click-counter:hover {
+  transform: translateY(-2px);  /* Desplazamiento hacia arriba al pasar el cursor */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);  /* Sombra más intensa al hacer hover */
+}
+
+/* Efecto de focus en los contenedores de clics */
+.alex-click-counter:focus {
+  outline: none;  /* Elimina el contorno por defecto */
+  box-shadow: 0 0 10px rgba(0, 0, 255, 0.5);  /* Sombra de enfoque azul */
+}
+
 
 /*--------------------------------------------------------------
 # Call To Action Section

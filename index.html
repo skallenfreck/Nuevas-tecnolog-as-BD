@@ -603,7 +603,7 @@
             <ul class="nav nav-tabs" id="articulosTabsAlex" role="tablist">
               <li class="nav-item" role="presentation">
                 <button class="nav-link active" id="alex-tab-1" data-bs-toggle="tab" data-bs-target="#alex-pane-1"
-                  type="button" role="tab" aria-controls="alex-pane-1" aria-selected="true">
+                  type="button" role="tab" aria-controls="alex-pane-1" aria-selected="true" onclick="countClicks(1)">
                   <div class="tab-content-preview">
                     <span class="tab-number">01</span>
                     <div class="tab-text">
@@ -615,7 +615,7 @@
               </li>
               <li class="nav-item" role="presentation">
                 <button class="nav-link" id="alex-tab-2" data-bs-toggle="tab" data-bs-target="#alex-pane-2"
-                  type="button" role="tab" aria-controls="alex-pane-2" aria-selected="false">
+                  type="button" role="tab" aria-controls="alex-pane-2" aria-selected="false" onclick="countClicks(2)">
                   <div class="tab-content-preview">
                     <span class="tab-number">02</span>
                     <div class="tab-text">
@@ -627,7 +627,7 @@
               </li>
               <li class="nav-item" role="presentation">
                 <button class="nav-link" id="alex-tab-3" data-bs-toggle="tab" data-bs-target="#alex-pane-3"
-                  type="button" role="tab" aria-controls="alex-pane-3" aria-selected="false">
+                  type="button" role="tab" aria-controls="alex-pane-3" aria-selected="false" onclick="countClicks(3)">
                   <div class="tab-content-preview">
                     <span class="tab-number">03</span>
                     <div class="tab-text">
@@ -696,42 +696,163 @@
 
                 <!--botón para cambiar el fondo de las dos secciones y los h3 a blanco -->
                 <button class="alex-button" onclick="changeBackgroundToWhite()">Cambiar fondo a blanco</button>
+
+                <!-- Contenedores para los contadores de clics por artículo -->
+                <div id="click-counter-1" class="alex-click-counter">
+                  Artículo 1 - Número de clics: 0
+                </div>
               </div>
-
-
-
               <img
                 src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNXFtaHhpcHkzamNyaGFpaG9xczhoamIyeTF0dmNidGV3aGpob2dwMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/JgFuxaPGFzT2LeQNjJ/giphy.gif"
                 alt="GIF del articulo 1" class="alex-article-image">
               <div class="alex-article-footer">Fundación Universitaria Konrad Lorenz </div>
             </div>
 
+            <!-- Artículo 2 -->
+            <div class="tab-pane fade alex-article-pane" id="alex-pane-2" role="tabpanel" aria-labelledby="alex-tab-2">
+              <h2 class="alex-article-header">Artículo 2: Privacy, Social Network Sites, and Social Relations</h2>
 
+              <!-- Sección con el ID de la sección para autores -->
+              <div id="alex-section" class="alex-content-panel">
+                <div class="alex-content-panel">
+                  <!-- Contenedor para el par h3 y p -->
+                  <div class="inline-container">
+                    <h3 class="alex-subtitleh3">Autores:</h3>
+                    <p class="alex-article-text">David J. Houghton & Adam N. Joinson.</p>
+                  </div>
 
+                  <div class="inline-container">
+                    <h3 class="alex-subtitleh3">Año de publicación:</h3>
+                    <p class="alex-article-text">28 Abril del 2010.</p>
+                  </div>
+
+                  <div class="inline-container">
+                    <h3 class="alex-subtitleh3">Palabras clave:</h3>
+                    <p class="alex-article-text"> computer mediated communication(CMC),network
+                      communities, privacy, social network sites, society </p>
+                  </div>
+
+                  <div class="inline-container">
+                    <h3 class="alex-subtitleh3">DOI:</h3>
+                    <a href="https://doi.org/10.1080/15228831003770775" class="alex-link"
+                      target="_blank">https://doi.org/10.1080/15228831003770775</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Texto adicional en p (cambiar de color también) -->
+              <p class="alex-article-text">Este artículo aborda las preocupaciones sobre la privacidad en las redes
+                sociales,
+                particularmente en sitios como Facebook, donde la convergencia de diferentes tipos de relaciones
+                sociales
+                puede generar riesgos para la privacidad. A través de entrevistas a un pequeño grupo de participantes,
+                se
+                identifican ejemplos de violaciones a la privacidad en estos entornos, tales como la divulgación no
+                autorizada
+                de información personal o el mal manejo de los límites de privacidad entre amigos.</p>
+              <p class="alex-article-text">Se discute la teoría de la gestión de privacidad en la comunicación (CPM) y
+                cómo
+                los usuarios de redes sociales a menudo enfrentan dificultades al intentar gestionar múltiples círculos
+                sociales, lo que a menudo lleva a violaciones de privacidad debido a la falta de control sobre los datos
+                compartidos. El artículo concluye destacando la necesidad de mejorar la educación y las herramientas de
+                control de privacidad en las redes sociales, sugiriendo que los usuarios deben ser más conscientes de
+                los
+                riesgos involucrados y las consecuencias de compartir información en línea.</p>
+
+              <!-- Contenedor para centrar los botones -->
+              <div class="alex-button-container">
+                <!-- Botón para cambiar el fondo de las dos secciones y los h3 a gris claro -->
+                <button class="alex-button" onclick="changeBackgroundColor()">Cambiar fondo a gris claro</button>
+
+                <!--botón para cambiar el fondo de las dos secciones y los h3 a blanco -->
+                <button class="alex-button" onclick="changeBackgroundToWhite()">Cambiar fondo a blanco</button>
+
+                <!-- Contenedores para los contadores de clics por artículo -->
+                <div id="click-counter-2" class="alex-click-counter">
+                  Artículo 2 - Número de clics: 0
+                </div>
+
+              </div>
+
+              <img
+                src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbjNtZHVjZzU2ZTJ3M2s4ZXZscGwwN2tqM3NpbXc2Mmc0ZHduNThmZSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/n6mEMqAuYOQ8l8qcEE/giphy.gif"
+                alt="GIF del articulo 2" class="alex-article-image">
+              <div class="alex-article-footer">Fundación Universitaria Konrad Lorenz </div>
+            </div>
+
+            <!-- Artículo 3 -->
+            <div class="tab-pane fade alex-article-pane" id="alex-pane-3" role="tabpanel" aria-labelledby="alex-tab-3">
+              <h2 class="alex-article-header">Artículo 3: Relating Social Media Diffusion, Education Level and
+                Cybersecurity
+                Protection Mechanisms to E‑Participation Initiatives: Insights
+                from a Cross‑Country Analysis</h2>
+
+              <!-- Sección con el ID de la sección para autores -->
+              <div id="alex-section" class="alex-content-panel">
+                <div class="alex-content-panel">
+                  <!-- Contenedor para el par h3 y p -->
+                  <div class="inline-container">
+                    <h3 class="alex-subtitleh3">Autores:</h3>
+                    <p class="alex-article-text"> Supunmali Ahangama.</p>
+                  </div>
+
+                  <div class="inline-container">
+                    <h3 class="alex-subtitleh3">Año de publicación:</h3>
+                    <p class="alex-article-text"> 17 de Abril de 2023.</p>
+                  </div>
+
+                  <div class="inline-container">
+                    <h3 class="alex-subtitleh3">Palabras clave:</h3>
+                    <p class="alex-article-text">E-Participation, VSN diffusion, Cybersecurity, Citizen education level,Protection Motivation Theory.</p>
+                  </div>
+
+                  <div class="inline-container">
+                    <h3 class="alex-subtitleh3">DOI:</h3>
+                    <a href="https://doi.org/10.1007/s10796-023-10385-7" class="alex-link"
+                      target="_blank">https://doi.org/10.1007/s10796-023-10385-7</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Texto adicional en p (cambiar de color también) -->
+              <p class="alex-article-text">El artículo analiza cómo la difusión de redes sociales virtuales (VSN), el
+                nivel educativo y los mecanismos de protección cibernética afectan la implementación de iniciativas de
+                participación electrónica (e-participación) en diferentes países. El estudio se basa en datos de 115
+                países y explora la relación entre el uso de VSN y la participación ciudadana, mediada por la
+                ciberseguridad y la educación. Se identifica que la ciberseguridad y la educación juegan un papel
+                crucial en el éxito de la participación ciudadana en plataformas digitales del gobierno.</p>
+
+              <p class="alex-article-text">Los resultados indican que la mejora en el uso de VSN incrementa la
+                participación ciudadana, especialmente en las fases de consulta y toma de decisiones, gracias a una
+                mayor protección cibernética y una educación pública adecuada. También se destaca que las políticas y
+                regulaciones sobre ciberseguridad, junto con la educación sobre amenazas y medidas de protección, son
+                esenciales para fomentar una participación segura y productiva en sistemas de e-participación.</p>
+
+              <!-- Contenedor para centrar los botones -->
+              <div class="alex-button-container">
+                <!-- Botón para cambiar el fondo de las dos secciones y los h3 a gris claro -->
+                <button class="alex-button" onclick="changeBackgroundColor()">Cambiar fondo a gris claro</button>
+
+                <!--botón para cambiar el fondo de las dos secciones y los h3 a blanco -->
+                <button class="alex-button" onclick="changeBackgroundToWhite()">Cambiar fondo a blanco</button>
+
+                <!-- Contenedores para los contadores de clics por artículo -->
+
+                <div id="click-counter-3" class="alex-click-counter">
+                  Artículo 3 - Número de clics: 0
+                </div>
+              </div>
+
+              <img
+                src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3MW1wcnRibzh4aWJvdHhraW9kYTBrcjUydTFzZHM2cHl4dWZ4ejRqbyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/12Ixh68NnwXJnO/giphy.gif"
+                alt="GIF del articulo 3" class="alex-article-image">
+              <div class="alex-article-footer">Fundación Universitaria Konrad Lorenz </div>
+            </div>
 
           </div> <!-- End Tabs Content -->
 
         </div>
       </div>
-
-      <!-- Artículo 2 -->
-      <div class="tab-pane fade alex-article-pane" id="alex-pane-2" role="tabpanel" aria-labelledby="alex-tab-2">
-        <h2 class="alex-article-header">Artículo 2: Privacidad en redes y relaciones sociales</h2>
-        <p class="alex-article-text">Este es el contenido detallado del artículo 2 sobre privacidad en redes
-          sociales...</p>
-        <img src="imagen2.jpg" class="alex-article-image" alt="Imagen del Artículo 2">
-        <div class="alex-article-footer">Pie de página del artículo 2</div>
-      </div>
-
-      <!-- Artículo 3 -->
-      <div class="tab-pane fade alex-article-pane" id="alex-pane-3" role="tabpanel" aria-labelledby="alex-tab-3">
-        <h2 class="alex-article-header">Artículo 3: Enseñanza en protección y ciberseguridad</h2>
-        <p class="alex-article-text">Este es el contenido detallado del artículo 3 sobre protección y
-          ciberseguridad...</p>
-        <img src="imagen3.jpg" class="alex-article-image" alt="Imagen del Artículo 3">
-        <div class="alex-article-footer">Pie de página del artículo 3</div>
-      </div>
-
       </div><!-- End Tabs Content -->
 
     </section><!-- /Features Alexander -->
