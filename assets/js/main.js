@@ -1,13 +1,9 @@
-/**
-* Template Name: LeadPage
-* Template URL: https://bootstrapmade.com/leadpage-bootstrap-landing-page-template/
-* Updated: Aug 12 2025 with Bootstrap v5.3.7
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
-(function() {
+(function () {
   "use strict";
+
+  /**
+   * --- Funciones Generales ---
+   */
 
   /**
    * Apply .scrolled class to the body as the page is scrolled down
@@ -44,19 +40,6 @@
       if (document.querySelector('.mobile-nav-active')) {
         mobileNavToogle();
       }
-    });
-
-  });
-
-  /**
-   * Toggle mobile nav dropdowns
-   */
-  document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
-    navmenu.addEventListener('click', function(e) {
-      e.preventDefault();
-      this.parentNode.classList.toggle('active');
-      this.parentNode.nextElementSibling.classList.toggle('dropdown-active');
-      e.stopImmediatePropagation();
     });
   });
 
@@ -113,7 +96,7 @@
    * Init swiper sliders
    */
   function initSwiper() {
-    document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
+    document.querySelectorAll(".init-swiper").forEach(function (swiperElement) {
       let config = JSON.parse(
         swiperElement.querySelector(".swiper-config").innerHTML.trim()
       );
@@ -147,13 +130,13 @@
   /**
    * Init isotope layout and filters
    */
-  document.querySelectorAll('.isotope-layout').forEach(function(isotopeItem) {
+  document.querySelectorAll('.isotope-layout').forEach(function (isotopeItem) {
     let layout = isotopeItem.getAttribute('data-layout') ?? 'masonry';
     let filter = isotopeItem.getAttribute('data-default-filter') ?? '*';
     let sort = isotopeItem.getAttribute('data-sort') ?? 'original-order';
 
     let initIsotope;
-    imagesLoaded(isotopeItem.querySelector('.isotope-container'), function() {
+    imagesLoaded(isotopeItem.querySelector('.isotope-container'), function () {
       initIsotope = new Isotope(isotopeItem.querySelector('.isotope-container'), {
         itemSelector: '.isotope-item',
         layoutMode: layout,
@@ -162,8 +145,8 @@
       });
     });
 
-    isotopeItem.querySelectorAll('.isotope-filters li').forEach(function(filters) {
-      filters.addEventListener('click', function() {
+    isotopeItem.querySelectorAll('.isotope-filters li').forEach(function (filters) {
+      filters.addEventListener('click', function () {
         isotopeItem.querySelector('.isotope-filters .filter-active').classList.remove('filter-active');
         this.classList.add('filter-active');
         initIsotope.arrange({
@@ -180,7 +163,7 @@
   /**
    * Correct scrolling position upon page load for URLs containing hash links.
    */
-  window.addEventListener('load', function(e) {
+  window.addEventListener('load', function (e) {
     if (window.location.hash) {
       if (document.querySelector(window.location.hash)) {
         setTimeout(() => {
@@ -216,5 +199,66 @@
   }
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
-
 })();
+
+/**
+   * --- Funciones Específicas para la Sección de Alexander ---
+   */
+
+  // Función de bienvenida para la sección de Alexander
+  function showWelcomeMessage() {
+    alert("¡Bienvenido a la sección de artículos de Alexander Chacon!");
+  }
+  window.onload = showWelcomeMessage;
+
+// Función para cambiar el color de fondo a gris claro y el color de los h3
+function changeBackgroundColor() {
+  const section1 = document.getElementById('alex-section');  // La sección de autores y demás
+  const section2 = document.querySelectorAll('.alex-article-text');  // La sección de texto adicional (p)
+  const headers = document.querySelectorAll('.alex-subtitleh3');  // Todos los h3 dentro de la sección
+
+  // Cambiar el fondo de la primera sección (la de autores)
+  if (section1) {
+    section1.style.backgroundColor = '#f1f1f1';  // Color de fondo gris claro para buen contraste con el texto negro
+  }
+
+  // Cambiar el fondo de todos los elementos con la clase "alex-article-text" (p)
+  section2.forEach(function(item) {
+    item.style.backgroundColor = '#f1f1f1';  // Color de fondo gris claro
+  });
+
+  // Cambiar el color de todos los h3 con la clase "alex-subtitleh3"
+  headers.forEach(function(header) {
+    header.style.color = '#333';  // Cambiar color de texto de h3 a gris oscuro (#333)
+  });
+}
+
+// Función para cambiar el color de fondo a blanco y el color de los h3 a negro
+function changeBackgroundToWhite() {
+  const section1 = document.getElementById('alex-section');  // La sección de autores y demás
+  const section2 = document.querySelectorAll('.alex-article-text');  // La sección de texto adicional (p)
+  const headers = document.querySelectorAll('.alex-subtitleh3');  // Todos los h3 dentro de la sección
+
+  // Cambiar el fondo de la primera sección (la de autores) a blanco
+  if (section1) {
+    section1.style.backgroundColor = '#fff';  // Fondo blanco
+  }
+
+  // Cambiar el fondo de todos los elementos con la clase "alex-article-text" (p) a blanco
+  section2.forEach(function(item) {
+    item.style.backgroundColor = '#fff';  // Fondo blanco
+  });
+
+  // Cambiar el color de todos los h3 con la clase "alex-subtitleh3" a negro
+  headers.forEach(function(header) {
+    header.style.color = '#000';  // Color de texto de h3 a negro
+  });
+}
+
+  // Función para contar los clics en la sección de Alexander
+  let clickCount = 0;
+  function countClicks() {
+    clickCount++;
+    document.getElementById("click-counter").innerHTML = "Número de clics: " + clickCount;
+  }
+

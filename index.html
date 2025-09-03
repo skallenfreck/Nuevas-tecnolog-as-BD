@@ -641,6 +641,7 @@
           </div><!-- End Tabs Header -->
 
           <!-- Tabs Content -->
+          <!-- Sección de contenido de Alexander -->
           <div class="tab-content alex-tab-content" id="articulosTabsAlexContent" data-aos="fade-up"
             data-aos-delay="300">
 
@@ -649,9 +650,11 @@
               aria-labelledby="alex-tab-1">
               <h2 class="alex-article-header">Artículo 1: Spotted Hyena Optimizer with Deep Learning Driven
                 Cybersecurity for Social Networks</h2>
-              <div class="alex-content-panel">
+
+              <!-- Sección con el ID de la sección para autores -->
+              <div id="alex-section" class="alex-content-panel">
                 <div class="alex-content-panel">
-                  <!-- Contenedor para el par h3 y p, de modo que no haya salto de línea entre ellos -->
+                  <!-- Contenedor para el par h3 y p -->
                   <div class="inline-container">
                     <h3 class="alex-subtitleh3">Autores:</h3>
                     <p class="alex-article-text">Anwer Mustafa, Aisha Abdalla, Heba G. Mohamed, Lubna A. Alharbi,
@@ -664,49 +667,74 @@
                   </div>
 
                   <div class="inline-container">
+                    <h3 class="alex-subtitleh3">Palabras clave:</h3>
+                    <p class="alex-article-text">Cybersecurity; cyberbullying; online social network; deep learning;
+                      spotted hyena optimizer</p>
+                  </div>
+
+                  <div class="inline-container">
                     <h3 class="alex-subtitleh3">DOI:</h3>
-                    <a href="https://doi.org/10.32604/csse.2023.031181" class=".alex-link:hover" target="_blank">
-                      https://doi.org/10.32604/csse.2023.031181
-                    </a>
+                    <a href="https://doi.org/10.32604/csse.2023.031181" class="alex-link"
+                      target="_blank">https://doi.org/10.32604/csse.2023.031181</a>
                   </div>
                 </div>
+              </div>
 
-                <!-- Texto adicional en p -->
-                <p class="alex-article-text">Este es el contenido detallado sobre el artículo relacionado con la
-                  optimización de hiena...</p>
+              <!-- Texto adicional en p (cambiar de color también) -->
+              <p class="alex-article-text">El artículo presenta un modelo de ciberseguridad para redes sociales,
+                denominado SHODLCS (Spotted Hyena Optimizer with Deep Learning Driven Cybersecurity), diseñado para
+                identificar y clasificar el ciberacoso (CB) en las redes sociales en línea (OSN).</p>
+              <p class="alex-article-text">Este modelo utiliza procesamiento de datos, extracción de características
+                basada en TF-IDF, y un modelo de red neuronal recurrente en cascada (CRNN) para la clasificación de CB.
+                Además, el algoritmo Spotted Hyena Optimizer (SHO) ajusta los hiperparámetros del modelo para mejorar su
+                rendimiento.</p>
+
+              <!-- Contenedor para centrar los botones -->
+              <div class="alex-button-container">
+                <!-- Botón para cambiar el fondo de las dos secciones y los h3 a gris claro -->
+                <button class="alex-button" onclick="changeBackgroundColor()">Cambiar fondo a gris claro</button>
+
+                <!--botón para cambiar el fondo de las dos secciones y los h3 a blanco -->
+                <button class="alex-button" onclick="changeBackgroundToWhite()">Cambiar fondo a blanco</button>
               </div>
 
 
-              <p class="alex-article-text">Este es el contenido detallado del artículo 1 sobre optimización de hiena en
-                redes sociales...</p>
-              <img src="imagen1.jpg" class="alex-article-image" alt="Imagen del Artículo 1">
-              <div class="alex-article-footer">Pie de página del artículo 1</div>
+
+              <img
+                src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNXFtaHhpcHkzamNyaGFpaG9xczhoamIyeTF0dmNidGV3aGpob2dwMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/JgFuxaPGFzT2LeQNjJ/giphy.gif"
+                alt="GIF del articulo 1" class="alex-article-image">
+              <div class="alex-article-footer">Fundación Universitaria Konrad Lorenz </div>
             </div>
 
 
-            <!-- Artículo 2 -->
-            <div class="tab-pane fade alex-article-pane" id="alex-pane-2" role="tabpanel" aria-labelledby="alex-tab-2">
-              <h2 class="alex-article-header">Artículo 2: Privacidad en redes y relaciones sociales</h2>
-              <p class="alex-article-text">Este es el contenido detallado del artículo 2 sobre privacidad en redes
-                sociales...</p>
-              <img src="imagen2.jpg" class="alex-article-image" alt="Imagen del Artículo 2">
-              <div class="alex-article-footer">Pie de página del artículo 2</div>
-            </div>
 
-            <!-- Artículo 3 -->
-            <div class="tab-pane fade alex-article-pane" id="alex-pane-3" role="tabpanel" aria-labelledby="alex-tab-3">
-              <h2 class="alex-article-header">Artículo 3: Enseñanza en protección y ciberseguridad</h2>
-              <p class="alex-article-text">Este es el contenido detallado del artículo 3 sobre protección y
-                ciberseguridad...</p>
-              <img src="imagen3.jpg" class="alex-article-image" alt="Imagen del Artículo 3">
-              <div class="alex-article-footer">Pie de página del artículo 3</div>
-            </div>
 
-          </div><!-- End Tabs Content -->
+          </div> <!-- End Tabs Content -->
+
+        </div>
+      </div>
+
+      <!-- Artículo 2 -->
+      <div class="tab-pane fade alex-article-pane" id="alex-pane-2" role="tabpanel" aria-labelledby="alex-tab-2">
+        <h2 class="alex-article-header">Artículo 2: Privacidad en redes y relaciones sociales</h2>
+        <p class="alex-article-text">Este es el contenido detallado del artículo 2 sobre privacidad en redes
+          sociales...</p>
+        <img src="imagen2.jpg" class="alex-article-image" alt="Imagen del Artículo 2">
+        <div class="alex-article-footer">Pie de página del artículo 2</div>
+      </div>
+
+      <!-- Artículo 3 -->
+      <div class="tab-pane fade alex-article-pane" id="alex-pane-3" role="tabpanel" aria-labelledby="alex-tab-3">
+        <h2 class="alex-article-header">Artículo 3: Enseñanza en protección y ciberseguridad</h2>
+        <p class="alex-article-text">Este es el contenido detallado del artículo 3 sobre protección y
+          ciberseguridad...</p>
+        <img src="imagen3.jpg" class="alex-article-image" alt="Imagen del Artículo 3">
+        <div class="alex-article-footer">Pie de página del artículo 3</div>
+      </div>
+
+      </div><!-- End Tabs Content -->
 
     </section><!-- /Features Alexander -->
-
-
 
     <!-- Features Section Camilo-->
     <section id="features" class="features section">

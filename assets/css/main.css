@@ -1998,7 +1998,7 @@ section,
 
 /* Estilo para los enlaces <a> */
 .alex-link {
-  font-size: 6px;
+  font-size: 14px;
   color: var(--accent-color);  /* Usar el color de acento */
   text-decoration: none;  /* Eliminar subrayado por defecto */
   line-height: 1.5;  /* Alineado con el h3 */
@@ -2010,12 +2010,16 @@ section,
   text-decoration: underline;
 }
 
-
 /* Estilo para las imágenes de los artículos */
 .alex-article-image {
-  width: 100%;
+  width: 100%; /* Ancho ajustable al 100% de su contenedor */
+  max-width: 350px; /* Establece un ancho máximo para evitar que las imágenes se agranden demasiado */
+  height: auto; /* Mantiene la relación de aspecto de la imagen */
   border-radius: 8px;
   margin-bottom: 15px;
+  display: block; /* Asegura que la imagen sea un bloque */
+  margin-left: auto;  /* Centra la imagen */
+  margin-right: auto; /* Centra la imagen */
 }
 
 /* Estilo para el pie de página de los artículos */
@@ -2024,6 +2028,48 @@ section,
   color: #888;
   text-align: right;
   margin-top: 20px;
+}
+
+/* Estilo para el contenedor que centra los botones */
+.alex-button-container {
+  display: flex;  /* Usamos Flexbox para centrar los botones */
+  justify-content: center;  /* Centra los botones horizontalmente */
+  gap: 20px;  /* Espacio entre los botones */
+  margin-top: 20px;  /* Espacio superior entre la sección y los botones */
+}
+
+/* Estilo para los botones */
+.alex-button {
+  background-color: var(--accent-color);  /* Color de fondo */
+  color: #fff;  /* Texto blanco */
+  font-size: 16px;  /* Tamaño de la fuente */
+  padding: 12px 24px;  /* Relleno (espaciado dentro del botón) */
+  border: none;  /* Sin borde */
+  border-radius: 25px;  /* Bordes redondeados */
+  cursor: pointer;  /* Cambia el cursor a mano al pasar el ratón */
+  transition: all 0.3s ease;  /* Transición suave para los efectos */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Sombra suave */
+}
+
+/* Efecto de hover en los botones */
+.alex-button:hover {
+  background-color: var(--accent-color);  /* El fondo se mantiene igual */
+  transform: translateY(-2px);  /* Desplazamiento hacia arriba al pasar el cursor */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);  /* Sombra más intensa al hacer hover */
+}
+
+/* Efecto de focus en los botones (cuando están seleccionados) */
+.alex-button:focus {
+  outline: none;  /* Elimina el contorno por defecto del botón */
+  box-shadow: 0 0 10px rgba(0, 0, 255, 0.5);  /* Sombra de enfoque azul */
+}
+
+/* Estilo opcional si deseas un color de fondo diferente cuando el botón está deshabilitado */
+.alex-button:disabled {
+  background-color: #ddd;  /* Color gris claro */
+  color: #888;  /* Color de texto gris */
+  cursor: not-allowed;  /* Cambia el cursor para mostrar que no se puede hacer clic */
+  box-shadow: none;  /* Sin sombra */
 }
 
 /*--------------------------------------------------------------
