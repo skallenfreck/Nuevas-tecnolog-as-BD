@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**
 * Template Name: LeadPage
 * Template URL: https://bootstrapmade.com/leadpage-bootstrap-landing-page-template/
@@ -6,8 +7,14 @@
 * License: https://bootstrapmade.com/license/
 */
 
+=======
+>>>>>>> Alexander
 (function () {
   "use strict";
+
+  /**
+   * --- Funciones Generales ---
+   */
 
   /**
    * Apply .scrolled class to the body as the page is scrolled down
@@ -45,6 +52,7 @@
         mobileNavToogle();
       }
     });
+<<<<<<< HEAD
 
   });
 
@@ -58,6 +66,8 @@
       this.parentNode.nextElementSibling.classList.toggle('dropdown-active');
       e.stopImmediatePropagation();
     });
+=======
+>>>>>>> Alexander
   });
 
   /**
@@ -216,7 +226,85 @@
   }
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
+})();
 
+/**
+   * --- Funciones Específicas para la Sección de Alexander ---
+   */
+
+  // Función de bienvenida para la sección de Alexander
+  function showWelcomeMessage() {
+    alert("¡Bienvenido a la búsqueda de artículos de VACODE !");
+  }
+  window.onload = showWelcomeMessage;
+
+// Función para cambiar el color de fondo a gris claro y el color de los h3
+function changeBackgroundColor() {
+  const section1 = document.getElementById('alex-section');  // La sección de autores y demás
+  const section2 = document.querySelectorAll('.alex-article-text');  // La sección de texto adicional (p)
+  const headers = document.querySelectorAll('.alex-subtitleh3');  // Todos los h3 dentro de la sección
+
+  // Cambiar el fondo de la primera sección (la de autores)
+  if (section1) {
+    section1.style.backgroundColor = '#f1f1f1';  // Color de fondo gris claro para buen contraste con el texto negro
+  }
+
+  // Cambiar el fondo de todos los elementos con la clase "alex-article-text" (p)
+  section2.forEach(function(item) {
+    item.style.backgroundColor = '#f1f1f1';  // Color de fondo gris claro
+  });
+
+  // Cambiar el color de todos los h3 con la clase "alex-subtitleh3"
+  headers.forEach(function(header) {
+    header.style.color = '#333';  // Cambiar color de texto de h3 a gris oscuro (#333)
+  });
+}
+
+// Función para cambiar el color de fondo a blanco y el color de los h3 a negro
+function changeBackgroundToWhite() {
+  const section1 = document.getElementById('alex-section');  // La sección de autores y demás
+  const section2 = document.querySelectorAll('.alex-article-text');  // La sección de texto adicional (p)
+  const headers = document.querySelectorAll('.alex-subtitleh3');  // Todos los h3 dentro de la sección
+
+  // Cambiar el fondo de la primera sección (la de autores) a blanco
+  if (section1) {
+    section1.style.backgroundColor = '#fff';  // Fondo blanco
+  }
+
+  // Cambiar el fondo de todos los elementos con la clase "alex-article-text" (p) a blanco
+  section2.forEach(function(item) {
+    item.style.backgroundColor = '#fff';  // Fondo blanco
+  });
+
+  // Cambiar el color de todos los h3 con la clase "alex-subtitleh3" a negro
+  headers.forEach(function(header) {
+    header.style.color = '#000';  // Color de texto de h3 a negro
+  });
+}
+
+// Función para contar los clics en cada artículo por separado
+let clickCount1 = 0;  // Contador para el artículo 1
+let clickCount2 = 0;  // Contador para el artículo 2
+let clickCount3 = 0;  // Contador para el artículo 3
+
+// Función para contar los clics por artículo
+function countClicks(article) {
+  if (article === 1) {
+    clickCount1++;  // Incrementa el contador para el artículo 1
+    document.getElementById("click-counter-1").innerHTML = "Artículo 1 - Número de clics: " + clickCount1;
+  } else if (article === 2) {
+    clickCount2++;  // Incrementa el contador para el artículo 2
+    document.getElementById("click-counter-2").innerHTML = "Artículo 2 - Número de clics: " + clickCount2;
+  } else if (article === 3) {
+    clickCount3++;  // Incrementa el contador para el artículo 3
+    document.getElementById("click-counter-3").innerHTML = "Artículo 3 - Número de clics: " + clickCount3;
+  }
+}
+
+
+
+
+<<<<<<< HEAD
 })();
 
 /*-------------------------------------------------------------------------------------------
@@ -280,3 +368,5 @@ window.addEventListener('load', initValentinaFeatures);
 # Aportes individuales al desarrollo del sitio web en cuanto al JS hecho por Valentina López
 Tarjeta individual del proceso de búsqueda en bases de datos
 --------------------------------------------------------------------------------------------*/
+=======
+>>>>>>> Alexander
