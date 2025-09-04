@@ -221,7 +221,6 @@
 
 /*-------------------------------------------------------------------------------------------
 # Aportes individuales al desarrollo del sitio web en cuanto al JS hecho por Valentina López
-Tarjeta individual del proceso de búsqueda en bases de datos
 --------------------------------------------------------------------------------------------*/
 function animateValentinaCounter() {
   const counter = document.querySelector('.valentina-stat-number[data-count]');
@@ -276,16 +275,136 @@ function initValentinaFeatures() {
 
 // Inicializar funciones de Valentina cuando se carga la página
 window.addEventListener('load', initValentinaFeatures);
-/*-------------------------------------------------------------------------------------------
-# Aportes individuales al desarrollo del sitio web en cuanto al JS hecho por Valentina López
-Tarjeta individual del proceso de búsqueda en bases de datos
---------------------------------------------------------------------------------------------*/
+
 /**
- * JS -Camilo
+ * Funciones personalizadas de Valentina López para las referencias bibliográficas
  */
 
+// Función principal de inicialización
+function valentinaInit() {
+  console.log('🌟 Referencias interactivas de Valentina López cargadas');
+  valentinaAnimateCards();
+  valentinaAddHoverEffects();
+  valentinaCreateCopyButtons();
+  valentinaAddClickEffects();
+}
 
+// Animación de entrada para las tarjetas
+function valentinaAnimateCards() {
+  const cards = document.querySelectorAll('.referencia-card');
 
+  cards.forEach((card, index) => {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(20px)';
+
+    setTimeout(() => {
+      card.style.transition = 'all 0.5s ease';
+      card.style.opacity = '1';
+      card.style.transform = 'translateY(0)';
+    }, index * 150);
+  });
+}
+
+// Efectos hover mejorados
+function valentinaAddHoverEffects() {
+  const cards = document.querySelectorAll('.referencia-card');
+
+  cards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      card.style.transform = 'translateY(-8px) scale(1.02)';
+      card.style.boxShadow = '0 15px 30px rgba(231, 76, 60, 0.15)';
+
+      // Efecto en el badge
+      const badge = card.querySelector('.investigador-badge');
+      if (badge) {
+        badge.style.animation = 'valentinaGlow 0.5s ease-in-out';
+      }
+    });
+
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'translateY(-5px)';
+      card.style.boxShadow = '0 10px 30px color-mix(in srgb, var(--default-color), transparent 85%)';
+    });
+  });
+}
+
+// Botones de copiado de la referencia APA
+function valentinaCreateCopyButtons() {
+  const cards = document.querySelectorAll('.referencia-card');
+
+  cards.forEach(card => {
+    const copyBtn = document.createElement('button');
+    copyBtn.innerHTML = '📋';
+    copyBtn.title = 'Copiar referencia APA';
+    copyBtn.className = 'valentina-copy-btn';
+
+    card.appendChild(copyBtn);
+
+    // Función de copiado
+    copyBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      valentinaCopyReference(card);
+    });
+  });
+}
+
+// Copiar referencia al portapapeles
+function valentinaCopyReference(card) {
+  const autor = card.querySelector('.autor').textContent;
+  const titulo = card.querySelector('.titulo').textContent;
+  const revista = card.querySelector('.revista').textContent;
+  const doi = card.querySelector('.doi a').href;
+
+  const referencia = `${autor} (2025). ${titulo}. ${revista}. ${doi}`;
+
+  navigator.clipboard.writeText(referencia).then(() => {
+    valentinaShowMessage('📋 Referencia APA copiada!');
+
+    // Efecto visual
+    card.style.background = 'rgba(231, 76, 60, 0.05)';
+    setTimeout(() => {
+      card.style.background = '';
+    }, 1000);
+  });
+}
+
+// Auto-inicialización
+document.addEventListener('DOMContentLoaded', function () {
+  if (document.querySelector('.referencias-grid')) {
+    setTimeout(valentinaInit, 100);
+  }
+});
+
+// Función para mostrar mensajes temporales
+function valentinaShowMessage(mensaje) {
+  // Crear elemento del mensaje
+  const messageDiv = document.createElement('div');
+  messageDiv.textContent = mensaje;
+  messageDiv.className = 'valentina-message';
+  
+  // Agregar al DOM
+  document.body.appendChild(messageDiv);
+  
+  // Remover después de 3 segundos
+  setTimeout(() => {
+    if (messageDiv.parentNode) {
+      messageDiv.classList.add('slide-out');
+      setTimeout(() => {
+        if (messageDiv.parentNode) {
+          messageDiv.parentNode.removeChild(messageDiv);
+        }
+      }, 300);
+    }
+  }, 3000);
+}
+
+/*-------------------------------------------------------------------------------------------
+# Aportes individuales al desarrollo del sitio web en cuanto al JS hecho por Valentina López
+--------------------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------------------------------
+# Aportes individuales al desarrollo del sitio web en cuanto al JS hecho por Camilo Prieto
+--------------------------------------------------------------------------------------------*/
 // Botón "Ver más / Ver menos"
 document.addEventListener("DOMContentLoaded", () => {
   const btn = document.querySelector(".ver-mas");
@@ -332,19 +451,26 @@ if (cardImage) {
     cardImage.style.transform = "translate(0, 0) scale(1)";
   });
 }
+/*-------------------------------------------------------------------------------------------
+# Aportes individuales al desarrollo del sitio web en cuanto al JS hecho por Camilo Prieto
+--------------------------------------------------------------------------------------------*/
 
-
-//CAMILO PRIETO - FIN
-
-/**
-   * --- Funciones Específicas para la Sección de Alexander ---
-   */
-
-  // Función de bienvenida para la sección de Alexander
-  function showWelcomeMessage() {
-    alert("¡Bienvenido a la búsqueda de artículos de VACODE !");
+/*-------------------------------------------------------------------------------------------
+# Aportes individuales al desarrollo del sitio web en cuanto al JS hecho por Alexander Chacon
+--------------------------------------------------------------------------------------------*/
+// Función de bienvenida hecha por Alexander
+function showWelcomeMessage() {
+  alert("¡Bienvenido a la búsqueda de artículos de VACode!");
+  
+  // Limpiar cualquier hash de la URL y mantener la página arriba
+  if (window.location.hash) {
+    window.history.replaceState(null, null, window.location.pathname);
   }
-  window.onload = showWelcomeMessage;
+  
+  // Forzar scroll al inicio
+  window.scrollTo(0, 0);
+}
+window.addEventListener('load', showWelcomeMessage);
 
 // Función para cambiar el color de fondo a gris claro y el color de los h3
 function changeBackgroundColor() {
@@ -358,12 +484,12 @@ function changeBackgroundColor() {
   }
 
   // Cambiar el fondo de todos los elementos con la clase "alex-article-text" (p)
-  section2.forEach(function(item) {
+  section2.forEach(function (item) {
     item.style.backgroundColor = '#f1f1f1';  // Color de fondo gris claro
   });
 
   // Cambiar el color de todos los h3 con la clase "alex-subtitleh3"
-  headers.forEach(function(header) {
+  headers.forEach(function (header) {
     header.style.color = '#333';  // Cambiar color de texto de h3 a gris oscuro (#333)
   });
 }
@@ -380,12 +506,12 @@ function changeBackgroundToWhite() {
   }
 
   // Cambiar el fondo de todos los elementos con la clase "alex-article-text" (p) a blanco
-  section2.forEach(function(item) {
+  section2.forEach(function (item) {
     item.style.backgroundColor = '#fff';  // Fondo blanco
   });
 
   // Cambiar el color de todos los h3 con la clase "alex-subtitleh3" a negro
-  headers.forEach(function(header) {
+  headers.forEach(function (header) {
     header.style.color = '#000';  // Color de texto de h3 a negro
   });
 }
@@ -408,3 +534,6 @@ function countClicks(article) {
     document.getElementById("click-counter-3").innerHTML = "Artículo 3 - Número de clics: " + clickCount3;
   }
 }
+/*-------------------------------------------------------------------------------------------
+# Aportes individuales al desarrollo del sitio web en cuanto al JS hecho por Alexander Chacon
+--------------------------------------------------------------------------------------------*/
