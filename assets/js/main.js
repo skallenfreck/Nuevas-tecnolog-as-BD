@@ -207,7 +207,7 @@
 
   // Función de bienvenida para la sección de Alexander
   function showWelcomeMessage() {
-    alert("¡Bienvenido a la sección de artículos de Alexander Chacon!");
+    alert("¡Bienvenido a la búsqueda de artículos de VACODE !");
   }
   window.onload = showWelcomeMessage;
 

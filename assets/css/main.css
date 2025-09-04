@@ -1925,6 +1925,180 @@ section,
   }
 }
 
+
+/*--------------------------------------------------------------
+# Card Section Alexander
+--------------------------------------------------------------*/
+
+/* Estilo personalizado para la tarjeta (card) */
+.alex-feature-card {
+  background: linear-gradient(135deg, #5a5a5a, #333) !important;  /* Degradado de gris suave a gris oscuro */
+  padding: 20px;  /* Espaciado interior de la tarjeta */
+  border-radius: 12px;  /* Bordes redondeados */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);  /* Sombra suave */
+  transition: all 0.3s ease;  /* Transición suave al hacer hover */
+}
+
+/* Efecto de hover en la tarjeta */
+.alex-feature-card:hover {
+  transform: translateY(-5px);  /* Desplazamiento hacia arriba en hover */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);  /* Sombra más intensa */
+}
+
+/* Estilo para los iconos dentro de la tarjeta */
+.alex-feature-card .feature-icon {
+  background-color: var(--accent-color);  /* Color de fondo */
+  border-radius: 50%;  /* Bordes redondeados */
+  padding: 20px;  /* Espaciado */
+  color: #fff;  /* Color blanco */
+  font-size: 24px;  /* Tamaño del icono */
+  text-align: center;  /* Centrado del icono */
+  margin-bottom: 20px;  /* Espacio inferior */
+}
+
+/* Estilo para el título dentro de la tarjeta */
+.alex-feature-card h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;  /* Texto blanco para contrastar con el fondo */
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+/* Estilo para el párrafo de la tarjeta */
+.alex-feature-card p {
+  font-size: 14px;
+  color: #fff;  /* Texto blanco para contrastar con el fondo */
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+/* Estilo para la lista de datos */
+.alex-feature-card .feature-benefits {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+/* Estilo para la lista de beneficios */
+.alex-feature-card .feature-benefits li {
+  font-size: 14px;
+  color: #fff;  /* Texto blanco */
+  margin-bottom: 10px;
+  padding-left: 50px;  /* Espaciado a la izquierda para las imágenes */
+  background-size: contain;  /* Mantener la imagen dentro del contenedor sin recortarla */
+  background-repeat: no-repeat;
+  background-position: left center;  /* Centra las imágenes dentro de su contenedor */
+  height: 40px;  /* Ajustamos la altura para que las imágenes sean más visibles */
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+/* Fondo específico para el primer ítem */
+.alex-feature-card .feature-benefits .benefit-item-1 {
+  background-image: url('/assets/img/IconBDAlex.png');  /* Cambia la ruta por la URL de tu imagen */
+}
+
+/* Fondo específico para el segundo ítem */
+.alex-feature-card .feature-benefits .benefit-item-2 {
+  background-image: url('/assets/img/IconCalendarioAlex.png');  /* Cambia la ruta por la URL de tu imagen */
+}
+
+/* Fondo específico para el tercer ítem */
+.alex-feature-card .feature-benefits .benefit-item-3 {
+  background-image: url('/assets/img/IconFileAlex.png');  /* Cambia la ruta por la URL de tu imagen */
+}
+
+/* Fondo específico para el cuarto ítem */
+.alex-feature-card .feature-benefits .benefit-item-4 {
+  background-image: url('/assets/img/IconExitAlex.png');  /* Cambia la ruta por la URL de tu imagen */
+}
+
+/* Fondo específico para el quinto ítem */
+.alex-feature-card .feature-benefits .benefit-item-5 {
+  background-image: url('/assets/img/IconLupaAlex.png');  /* Cambia la ruta por la URL de tu imagen */
+}
+
+
+/* Opcional: Los iconos ahora serán invisibles si deseas usar las imágenes como el fondo */
+.alex-feature-card .feature-benefits li i {
+  color: transparent;  /* Los iconos se vuelven invisibles */
+}
+
+/* Estilo para la imagen dentro de la tarjeta */
+.alex-feature-card .feature-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 20px;
+  transition: transform 0.3s ease;  /* Transición de imagen */
+}
+
+.alex-feature-card .feature-image img:hover {
+  transform: scale(1.05);  /* Efecto de aumento de la imagen al pasar el mouse */
+}
+
+/* Estilo específico para las estadísticas dentro de la tarjeta */
+.stats-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 30px;
+  padding: 20px;
+  background: #f2f2f2;  /* Fondo gris claro elegante */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  text-align: center; /* Centrado de todos los textos dentro de .stats-container */
+}
+
+/* Estilo para cada item de la estadística */
+.stat-item {
+  font-size: 14px;
+  color: #333;
+  font-weight: bold;
+  text-align: center;  /* Centrado del texto tanto para el título como el valor */
+}
+
+/* Títulos dentro de cada sección de estadísticas */
+.stat-item h5 {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: var(--accent-color);
+  text-align: center; /* Asegura que el título esté centrado */
+}
+
+/* Valores de las estadísticas con un color suave */
+.stat-item p {
+  font-size: 14px;
+  color: #444;
+  font-weight: normal;
+  text-align: center; /* Asegura que el valor también esté centrado */
+}
+
+/* Estilo para el párrafo de "Búsqueda hecha por" */
+.search-author {
+  font-size: 16px;
+  font-weight: 500; /* Hacer el texto un poco más grueso */
+  color: #333; /* Color gris oscuro para el texto "Búsqueda hecha por" */
+  text-align: center; /* Centrar el texto */
+  margin-top: 20px; /* Espacio superior */
+  margin-bottom: 20px; /* Espacio inferior */
+  padding: 10px; /* Relleno alrededor del texto */
+  background-color: #fff; /* Fondo blanco */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  text-transform: uppercase; /* Hacer el texto en mayúsculas */
+  font-family: 'Arial', sans-serif; /* Fuente sencilla y clara */
+}
+
+/* Resaltar el nombre */
+.search-author span {
+  font-weight: bold; /* Resaltar el nombre de la persona */
+  color: var(--accent-color); /* Color de acento para el nombre */
+}
+
 /*--------------------------------------------------------------
 # Features Section Alexander
 --------------------------------------------------------------*/
@@ -1981,7 +2155,7 @@ section,
 
 /* Estilo para los títulos h3 dentro del panel */
 .alex-subtitleh3 {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: bold;
   color: #333;
   margin-right: 10px; /* Espacio entre el h3 y el p */
@@ -1990,7 +2164,7 @@ section,
 
 /* Estilo para los textos dentro del p */
 .alex-article-text {
-  font-size: 12px;
+  font-size: 15px;
   line-height: 1.5; /* Asegura que el alineado sea consistente con los h3 */
   color: #555;
   margin: 0; /* Eliminar el margen para que el p se alinee correctamente */
@@ -1998,7 +2172,7 @@ section,
 
 /* Estilo para los enlaces <a> */
 .alex-link {
-  font-size: 14px;
+  font-size: 15px;
   color: var(--accent-color);  /* Usar el color de acento */
   text-decoration: none;  /* Eliminar subrayado por defecto */
   line-height: 1.5;  /* Alineado con el h3 */
@@ -2010,17 +2184,19 @@ section,
   text-decoration: underline;
 }
 
-/* Estilo para las imágenes de los artículos */
+/* Estilo para el contenedor de la imagen (GIF) dentro del artículo */
 .alex-article-image {
-  width: 100%; /* Ancho ajustable al 100% de su contenedor */
-  max-width: 350px; /* Establece un ancho máximo para evitar que las imágenes se agranden demasiado */
-  height: auto; /* Mantiene la relación de aspecto de la imagen */
-  border-radius: 8px;
-  margin-bottom: 15px;
-  display: block; /* Asegura que la imagen sea un bloque */
-  margin-left: auto;  /* Centra la imagen */
-  margin-right: auto; /* Centra la imagen */
+  margin-top: 30px;  /* Agregar espacio superior entre la imagen y los botones de cambiar el fondo */
+  margin-bottom: 30px;  /* Añadir espacio entre la imagen y el pie de página */
+  display: block;  /* Asegura que la imagen sea un bloque y se alinee correctamente */
+  width: 100%;  /* Ancho ajustable al 100% de su contenedor */
+  max-width: 350px;  /* Ancho máximo de la imagen */
+  height: auto;  /* Mantiene la relación de aspecto */
+  border-radius: 8px;  /* Bordes redondeados */
+  margin-left: auto;  /* Centra la imagen horizontalmente */
+  margin-right: auto;  /* Centra la imagen horizontalmente */
 }
+
 
 /* Estilo para el pie de página de los artículos */
 .alex-article-footer {
@@ -2042,15 +2218,15 @@ section,
 .alex-button {
   background-color: var(--accent-color);  /* Color de fondo */
   color: #fff;  /* Texto blanco */
-  font-size: 16px;  /* Tamaño de la fuente */
-  padding: 12px 24px;  /* Relleno (espaciado dentro del botón) */
+  font-size: 14px;  /* Tamaño de la fuente reducido */
+  padding: 4px 8px;  /* Reducción de relleno (espaciado dentro del botón) */
   border: none;  /* Sin borde */
-  border-radius: 25px;  /* Bordes redondeados */
+  border-radius: 20px;  /* Bordes redondeados más pequeños */
   cursor: pointer;  /* Cambia el cursor a mano al pasar el ratón */
   transition: all 0.3s ease;  /* Transición suave para los efectos */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Sombra suave */
   width: auto;  /* Permite que el botón tenga un tamaño dinámico basado en el contenido */
-  min-width: 200px;  /* Asegura que los botones tengan un tamaño mínimo */
+  min-width: 160px;  /* Asegura que los botones tengan un tamaño mínimo */
   text-align: center;  /* Centra el texto dentro del botón */
 }
 
@@ -2074,6 +2250,7 @@ section,
   cursor: not-allowed;  /* Cambia el cursor para mostrar que no se puede hacer clic */
   box-shadow: none;  /* Sin sombra */
 }
+
 
 /* Estilo para los contenedores de clics (los contadores) */
 .alex-click-counter {
